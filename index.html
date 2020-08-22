@@ -12,7 +12,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { position: fixed; bottom: 0px; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -21,13 +21,13 @@
   <section class="card_action">
     <img src="images/logo.svg" class="logo"/>
     <div class="action_buttons">
-      <span class="icon_document">
+      <span class="icon_action">
         <img src="images/icon-document.svg"/>
       </span>
-      <span class="icon_folder">
+      <span class="icon_action">
         <img src="images/icon-folder.svg"/>
       </span>
-      <span class="icon_upload">
+      <span class="icon_action">
         <img src="images/icon-upload.svg"/>
       </span>
     </div>
@@ -42,9 +42,6 @@
         </div>
       </div>
     </div>
-<!--    <div class="storage_text_left">-->
-<!--      <span class="bold">185</span> GB Left-->
-<!--    </div>-->
     <div class="storage_text_barre">
       <div>
         0 GB
@@ -53,11 +50,16 @@
         1000 GB
       </div>
     </div>
+    <div class="pointe">
+      <div class="storage_text_left">
+      <span class="big">185</span> GB LEFT
+      </div>
+    </div>
   </section>
 </div>
 <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Julien Prugne et Anne-Bérengère Gesset</a>.
+    Coded by <a href="#">Anne-Bérengère Gesset</a>.
 </div>
 </body>
 </html>

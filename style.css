@@ -3,6 +3,7 @@ body {
     font-family: 'Raleway', sans-serif;
     min-height: 100vh;
     background-color: hsl(229, 57%, 11%);
+    background-size: 100% 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +27,7 @@ body {
     margin-top: 2em;
 }
 
-.icon_document {
+.icon_action {
     background-color: hsl(229, 57%, 11%);
     border-radius: 10px;
     height: 3em;
@@ -37,38 +38,18 @@ body {
     margin-right: 1em;
 }
 
-.icon_folder {
-    background-color: hsl(229, 57%, 11%);
-    border-radius: 10px;
-    height: 3em;
-    width: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0.9em;
-}
-
-.icon_upload {
-    background-color: hsl(229, 57%, 11%);
-    border-radius: 10px;
-    height: 3em;
-    width: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0.9em;
-}
-
 .storage_stat {
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px;
     font-size: 0.9em;
+    position: relative;
 }
 
 .storage_barre_empty {
-    height: 1.4em;
+    min-height: 1.4em;
+    max-height: 1.4em;
     width: 100%;
-    background-color: hsl(229, 57%, 11%);
+    background-color: #161f48;
     border-radius: 10px;
     margin: 1em 0em 0.5em 0em;
     display: flex;
@@ -78,14 +59,13 @@ body {
 .storage_barre_full {
     height: 1em;
     border-radius: 10px;
-    width: 70%;
+    width: 81.5%;
     background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     margin-left: 0.2em;
     padding-right: 0.15em;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
 }
 
 .storage_barre_point {
@@ -97,6 +77,12 @@ body {
 
 .bold {
     font-weight: 700;
+}
+
+.big {
+    font-size: 3.4em;
+    color: hsl(229, 57%, 11%);
+    margin-right: 0.2em;
 }
 
 .storage_text_barre {
@@ -112,7 +98,20 @@ body {
     color: hsl(243, 100%, 93%);
 }
 
-
+.storage_text_left {
+    background-color: white;
+    min-width: 180px;
+    max-width: 180px;
+    min-height: 72px;
+    max-height: 72px;
+    font-size: 0.85em;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 0.2em;
+}
 
 /*ordinateur*/
 @media only screen and (min-width: 941px) {
@@ -137,11 +136,34 @@ body {
     }
 
     .storage_stat {
-        max-width: 465px;
-        min-width: 465px;
+        max-width: 460px;
+        min-width: 460px;
         min-height: 115px;
         max-height: 115px;
         padding: 2.7em 2.7em 0em 2.7em;
+    }
+
+    .storage_text_left {
+        position: absolute;
+        top: -22px;
+        left: 22px;
+        border-radius: 10px 10px 0px 10px;
+    }
+
+    .pointe {
+        content: "";
+        min-width: 180px;
+        max-width: 180px;
+        min-height: 50px;
+        max-height: 50px;
+        position: absolute;
+        top: -45px;
+        right: 2.6em;
+        border-radius: 0px 10px 0px 0px;
+        background-color: transparent;
+        border-width: 22px;
+        border-style: solid;
+        border-color: transparent white transparent transparent;
     }
 
 }
@@ -167,8 +189,8 @@ body {
         max-height: 95px;
         display: flex;
         flex-direction: column;
-        /*align-items: center;*/
         padding: 2.2em;
+        align-items: center;
     }
 
     .storage_text_used {
@@ -176,5 +198,15 @@ body {
         text-align: center;
     }
 
+    .storage_text_barre{
+        width: 100%;
+    }
+
+    .storage_text_left {
+        border-radius: 10px;
+        position: absolute;
+        bottom: -36px;
+        left: 71px;
+    }
 
 }
